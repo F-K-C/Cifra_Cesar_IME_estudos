@@ -6,7 +6,7 @@ print("Mensagem: ", mensagem)
 print("Chave: ", chave)
 
 for cadaLetra in mensagem:
-    numero = ord(cadaLetra)
-    numero = numero + chave
-    nova_letra = chr(numero)
+
+    formula = (ord(cadaLetra) - ord('a') + chave) %26 + ord('a')
+    nova_letra = chr(formula) 
     print(nova_letra)
